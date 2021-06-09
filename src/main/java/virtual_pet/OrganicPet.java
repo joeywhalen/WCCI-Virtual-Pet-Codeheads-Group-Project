@@ -1,7 +1,5 @@
 package virtual_pet;
 
-public class Application {
-
+public class OrganicPet {
     //to be written
-
 }

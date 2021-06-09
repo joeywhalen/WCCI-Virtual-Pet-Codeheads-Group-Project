@@ -1,7 +1,5 @@
 package virtual_pet;
 
-public class Application {
-
+public class RoboticPet {
     //to be written
-
 }
