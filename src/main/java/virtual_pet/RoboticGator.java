@@ -1,8 +1,8 @@
 package virtual_pet;
 
-public class OrganicBear extends OrganicPet implements Walkable {
+public class RoboticGator extends RoboticPet implements Walkable {
 
-    public OrganicBear (String name) {
+    public RoboticGator (String name) {
         super(name);
 
     }
