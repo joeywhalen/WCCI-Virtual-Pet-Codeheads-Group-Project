@@ -86,7 +86,7 @@ public class VirtualPet extends VirtualPetShelter {
         tick();
     }
 
-    public void walkOrganic() {
+    public void walkOrganic(String name) {
         boredom += 15;
         hunger -= 10;
         thirst -=5;

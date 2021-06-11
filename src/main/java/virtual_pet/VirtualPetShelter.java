@@ -33,7 +33,7 @@ public class VirtualPetShelter {
         VirtualPet winnie = new VirtualPet("Winnie", "I have a rumbly in my tumbly.", 45, 40, 60,100);
         VirtualPet gummi = new VirtualPet("Gummi", "Once was candy for kids, now 'candy' for adults.", 45, 60, 420,100);
         VirtualPet ticktock = new VirtualPet("Tick-Tock", "I swallowed a clock.  So what?", 40, 50, 60,100);
-        VirtualPet wally = new VirtualPet("Wally Gator", "Yea, I'm prone to mishaps.  So what?", 50, 60, 70,100);
+        VirtualPet wally = new VirtualPet("WallyGator", "Yea, I'm prone to mishaps.  So what?", 50, 60, 70,100);
         virtualOrganicPets.add(yogi);
         virtualOrganicPets.add(smokey);
         virtualOrganicPets.add(winnie);
@@ -257,6 +257,13 @@ public class VirtualPetShelter {
             pet.tick();
         }
     }
+
+    public void roboticTick() {
+        for (VirtualPet pet : virtualRoboticPets) {
+            pet.roboticTick();
+        }
+    }
+
     public boolean isAlive() {
         return true;
     }

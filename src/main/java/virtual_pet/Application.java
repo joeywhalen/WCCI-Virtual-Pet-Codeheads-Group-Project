@@ -7,7 +7,6 @@ public class Application {
         VirtualPetShelter petShelter = new VirtualPetShelter();
         petShelter.initialOrganicPets();
         petShelter.initialRoboticPets();
-        System.out.println("Thank you for volunteering at The Codeheads Virtual Pet Shelter!");
 
         System.out.println("Thank you for volunteering at The Codeheads Virtual Pet Shelter!");
         System.out.println(" ");

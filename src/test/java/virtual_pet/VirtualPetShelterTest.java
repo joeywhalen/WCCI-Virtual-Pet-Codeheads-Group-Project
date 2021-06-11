@@ -205,7 +205,7 @@ public class VirtualPetShelterTest {
     }
 
     @Test
-    public void shouldcChargeAllRoboticPetBatteriesInShelter() {
+    public void shouldChargeAllRoboticPetBatteriesInShelter() {
         ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
         RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
         RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
@@ -332,47 +332,87 @@ public class VirtualPetShelterTest {
         }
     }
 
-//    @Test
-//    public void shouldWalkWithOneOrganicPetInShelter() {
-//        ArrayList<VirtualPet> underTest = petShelter.virtualOrganicPets;
-//        VirtualPet yogi = new VirtualPet("Yogi", "Hey hey hey! I'm smarter than your av-er-age bear!", 50, 50, 50, 50);
-//        VirtualPet smokey = new VirtualPet("Smokey", "Only YOU can prevent forest fires.", 40, 40, 40, 50);
-//        underTest.add(yogi);
-//        underTest.add(smokey);
-//        ArrayList<Integer> initialWasteLevel = new ArrayList<Integer>();
-//        ArrayList<Integer> initialBoredomLevel = new ArrayList<Integer>();
-//        for (VirtualPet pet : underTest) {
-//            initialWasteLevel.add(pet.getWaste());
-//            initialBoredomLevel.add(pet.getBoredom());
-//        }
-//        petShelter.walkOrganic("Yogi");
-//        assertTrue(initialBoredomLevel.get(0) < underTest.get(0).getBoredom());
-//        assertTrue(initialBoredomLevel.get(1) > underTest.get(1).getBoredom());
-//        assertTrue(initialWasteLevel.get(0) < underTest.get(0).getWaste());
-//        assertTrue(initialWasteLevel.get(1) > underTest.get(1).getWaste());
-//    }
+    @Test
+    public void shouldWalkWithOneOrganicPetInShelter() {
+        ArrayList<VirtualPet> underTest = petShelter.virtualOrganicPets;
+        VirtualPet yogi = new VirtualPet("Yogi", "Hey hey hey! I'm smarter than your av-er-age bear!", 50, 50, 50, 50);
+        VirtualPet smokey = new VirtualPet("Smokey", "Only YOU can prevent forest fires.", 40, 40, 40, 50);
+        underTest.add(yogi);
+        underTest.add(smokey);
+        ArrayList<Integer> initialWasteLevel = new ArrayList<Integer>();
+        ArrayList<Integer> initialBoredomLevel = new ArrayList<Integer>();
+        for (VirtualPet pet : underTest) {
+            initialWasteLevel.add(pet.getWaste());
+            initialBoredomLevel.add(pet.getBoredom());
+        }
+        petShelter.walkOrganic("Yogi");
+        assertTrue(initialBoredomLevel.get(0) < underTest.get(0).getBoredom());
+        assertTrue(initialBoredomLevel.get(1) > underTest.get(1).getBoredom());
+        assertTrue(initialWasteLevel.get(0) < underTest.get(0).getWaste());
+        assertTrue(initialWasteLevel.get(1) > underTest.get(1).getWaste());
+    }
 
-//    @Test
-//    public void shouldCallTickFromClass() {
-//        ArrayList<VirtualPet> underTest = petShelter.virtualPets;
-//        VirtualPet yogi = new VirtualPet("Yogi", "Hey hey hey! I'm smarter than your av-er-age bear!", 50, 50, 50);
-//        VirtualPet smokey = new VirtualPet("Smokey", "Only YOU can prevent forest fires.", 40, 40, 40);
-//        VirtualPet winnie = new VirtualPet("Winnie", "I have a rumbly in my tumbly.", 25, 40, 60);
-//        VirtualPet gummi = new VirtualPet("Gummi", "Once was candy for kids, now 'candy' for adults.", 25, 60, 420);
-//        underTest.add(yogi);
-//        underTest.add(smokey);
-//        underTest.add(winnie);
-//        underTest.add(gummi);
-//        ArrayList<Integer> initialBoredomLevel = new ArrayList<Integer>();
-//        for (VirtualPet pet : underTest) {
-//            initialBoredomLevel.add(pet.getBoredom());
-//
-//        }
-//        petShelter.tick();
-//        int i = 0;
-//        for (VirtualPet pet : underTest) {
-//            assertTrue(initialBoredomLevel.get(i) > pet.getBoredom());
-//            i++;
-//        }
-//    }
+    @Test
+    public void shouldWalkWithOneRoboticPetInShelter() {
+        ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
+        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
+        underTest.add(booboo);
+        underTest.add(kissyfur);
+        ArrayList<Integer> initialBoredomLevel = new ArrayList<Integer>();
+        for (VirtualPet pet : underTest) {
+            initialBoredomLevel.add(pet.getBoredom());
+        }
+        petShelter.playWithRobotic("Boo-Boo");
+        assertTrue(initialBoredomLevel.get(0) < underTest.get(0).getBoredom());
+        assertTrue(initialBoredomLevel.get(1) > underTest.get(1).getBoredom());
+    }
+
+    @Test
+    public void shouldCallTickFromOrganicClass() {
+        ArrayList<VirtualPet> underTest = petShelter.virtualOrganicPets;
+        VirtualPet yogi = new VirtualPet("Yogi", "Hey hey hey! I'm smarter than your av-er-age bear!", 50, 50, 50, 50);
+        VirtualPet smokey = new VirtualPet("Smokey", "Only YOU can prevent forest fires.", 40, 40, 40, 50);
+        VirtualPet winnie = new VirtualPet("Winnie", "I have a rumbly in my tumbly.", 25, 40, 60, 50);
+        VirtualPet gummi = new VirtualPet("Gummi", "Once was candy for kids, now 'candy' for adults.", 25, 60, 420, 50);
+        underTest.add(yogi);
+        underTest.add(smokey);
+        underTest.add(winnie);
+        underTest.add(gummi);
+        ArrayList<Integer> initialBoredomLevel = new ArrayList<Integer>();
+        for (VirtualPet pet : underTest) {
+            initialBoredomLevel.add(pet.getBoredom());
+
+        }
+        petShelter.tick();
+        int i = 0;
+        for (VirtualPet pet : underTest) {
+            assertTrue(initialBoredomLevel.get(i) > pet.getBoredom());
+            i++;
+        }
+    }
+
+    @Test
+    public void shouldCallTickFromRoboticClass() {
+        ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
+        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
+        RoboticPet ally = new RoboticPet("Ally Gator", "It's a punny name. So what?", 45, 70, 60);
+        RoboticPet gummy = new RoboticPet("Gummy", "Yeah I'm a Brony. So what?", 45, 70, 60);
+        underTest.add(booboo);
+        underTest.add(kissyfur);
+        underTest.add(ally);
+        underTest.add(gummy);
+        ArrayList<Integer> initialBoredomLevel = new ArrayList<Integer>();
+        for (VirtualPet pet : underTest) {
+            initialBoredomLevel.add(pet.getBoredom());
+
+        }
+        petShelter.roboticTick();
+        int i = 0;
+        for (VirtualPet pet : underTest) {
+            assertTrue(initialBoredomLevel.get(i) > pet.getBoredom());
+            i++;
+        }
+    }
 }
