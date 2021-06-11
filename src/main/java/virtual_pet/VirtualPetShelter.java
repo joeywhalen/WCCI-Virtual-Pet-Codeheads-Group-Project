@@ -216,7 +216,7 @@ public class VirtualPetShelter {
         }
     }
 
-    public void cleanAllcages() {
+    public void cleanAllCages() {
         for (VirtualPet pet : virtualOrganicPets) {
             pet.cleanCages();
             pet.tick();

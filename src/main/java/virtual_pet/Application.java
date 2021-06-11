@@ -117,7 +117,7 @@ public class Application {
                     petShelter.checkOrganicHealthStatus();
                     break;
                 case 7:
-                    petShelter.cleanAllcages();
+                    petShelter.cleanAllCages();
                     petShelter.displayOrganicHealthStatus();
                     petShelter.checkOrganicHealthStatus();
                     System.out.println("Thanks for cleaning the cages! ");
