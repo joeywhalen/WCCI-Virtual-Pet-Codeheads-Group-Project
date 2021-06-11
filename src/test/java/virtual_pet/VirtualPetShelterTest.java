@@ -45,7 +45,7 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldReturnCollectionOfAllRoboticPetsInShelter() { //We need to iron this out.  We can currectly find by index, but NOT by name.
         ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
-        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet booboo = new RoboticPet("Boo-Boo", "But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
         RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
         RoboticPet ally = new RoboticPet("Ally Gator", "It's a punny name. So what?", 45, 70, 60);
         RoboticPet gummy = new RoboticPet("Gummy", "Yeah I'm a Brony. So what?", 45, 70, 60);
@@ -78,7 +78,7 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldRetrieveARoboticPetBasedOnName() {
         ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
-        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet booboo = new RoboticPet("Boo-Boo", "But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
         RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
         RoboticPet ally = new RoboticPet("Ally Gator", "It's a punny name. So what?", 45, 70, 60);
         RoboticPet gummy = new RoboticPet("Gummy", "Yeah I'm a Brony. So what?", 45, 70, 60);
@@ -108,12 +108,12 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldAddARoboticPetToShelter() {
         ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
-        RoboticPet booboo = new  RoboticPet("Boo-boo", "Hey hey hey! I'm smarter than your av-er-age bear!", 50, 50, 50);
-        RoboticPet kissyfur = new  RoboticPet("Kissyfur", "Only YOU can prevent forest fires.", 40, 40, 40);
+        RoboticPet booboo = new RoboticPet("Boo-boo", "Hey hey hey! I'm smarter than your av-er-age bear!", 50, 50, 50);
+        RoboticPet kissyfur = new RoboticPet("Kissyfur", "Only YOU can prevent forest fires.", 40, 40, 40);
         underTest.add(booboo);
         underTest.add(kissyfur);
         assertEquals(2, underTest.size());
-        RoboticPet ally = new  RoboticPet("Ally", "I have a rumbly in my tumbly.", 25, 40, 60);
+        RoboticPet ally = new RoboticPet("Ally", "I have a rumbly in my tumbly.", 25, 40, 60);
         underTest.add(ally);
         assertEquals(3, underTest.size());
     }
@@ -137,7 +137,7 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldRemoveOneRoboticPetFromShelter() {
         ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
-        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet booboo = new RoboticPet("Boo-Boo", "But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
         RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
         RoboticPet ally = new RoboticPet("Ally Gator", "It's a punny name. So what?", 45, 70, 60);
         RoboticPet gummy = new RoboticPet("Gummy", "Yeah I'm a Brony. So what?", 45, 70, 60);
@@ -168,7 +168,7 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldRemoveAllRoboticPetsFromShelter() {
         ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
-        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet booboo = new RoboticPet("Boo-Boo", "But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
         RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
         RoboticPet ally = new RoboticPet("Ally Gator", "It's a punny name. So what?", 45, 70, 60);
         RoboticPet gummy = new RoboticPet("Gummy", "Yeah I'm a Brony. So what?", 45, 70, 60);
@@ -207,7 +207,7 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldChargeAllRoboticPetBatteriesInShelter() {
         ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
-        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet booboo = new RoboticPet("Boo-Boo", "But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
         RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
         RoboticPet ally = new RoboticPet("Ally Gator", "It's a punny name. So what?", 45, 70, 60);
         RoboticPet gummy = new RoboticPet("Gummy", "Yeah I'm a Brony. So what?", 45, 70, 60);
@@ -255,7 +255,7 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldOilAllRoboticPetInShelter() {
         ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
-        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet booboo = new RoboticPet("Boo-Boo", "But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
         RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
         RoboticPet ally = new RoboticPet("Ally Gator", "It's a punny name. So what?", 45, 70, 60);
         RoboticPet gummy = new RoboticPet("Gummy", "Yeah I'm a Brony. So what?", 45, 70, 60);
@@ -295,7 +295,7 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldPlayWithOneRoboticPetInShelter() {
         ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
-        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet booboo = new RoboticPet("Boo-Boo", "But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
         RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
         underTest.add(booboo);
         underTest.add(kissyfur);
@@ -355,7 +355,7 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldWalkWithOneRoboticPetInShelter() {
         ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
-        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet booboo = new RoboticPet("Boo-Boo", "But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
         RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
         underTest.add(booboo);
         underTest.add(kissyfur);
@@ -395,7 +395,7 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldCallTickFromRoboticClass() {
         ArrayList<VirtualPet> underTest = petShelter.virtualRoboticPets;
-        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet booboo = new RoboticPet("Boo-Boo", "But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
         RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
         RoboticPet ally = new RoboticPet("Ally Gator", "It's a punny name. So what?", 45, 70, 60);
         RoboticPet gummy = new RoboticPet("Gummy", "Yeah I'm a Brony. So what?", 45, 70, 60);

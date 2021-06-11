@@ -12,30 +12,33 @@ public class RoboticPet extends VirtualPet {
 
     }
 
-
-    public RoboticPet (String name) {
+    public RoboticPet(String name) {
         super(name);
         this.batteryLevel = batteryLevel;
         this.oilLevel = oilLevel;
     }
+
     public void chargeBattery() {
         batteryLevel = 100;
         oilLevel -= 5;
         boredom -= 10;
         roboticTick();
     }
+
     public void oilRobotic() {
         batteryLevel -= 10;
         oilLevel = 100;
         boredom -= 10;
         roboticTick();
     }
+
     public void playWithRobotic(String name) {
         batteryLevel -= 20;
         oilLevel -= 20;
         boredom += 20;
         roboticTick();
     }
+
     public void walkRobotic(String name) {
         batteryLevel -= 20;
         oilLevel -= 20;
@@ -48,9 +51,11 @@ public class RoboticPet extends VirtualPet {
         batteryLevel = Math.min(Math.max(batteryLevel - 5, 0), 100);
         boredom = Math.min(Math.max(boredom - 5, 0), 100);
     }
+
     public int getBatteryLevel() {
         return batteryLevel;
     }
+
     public int getOilLevel() {
         return oilLevel;
     }

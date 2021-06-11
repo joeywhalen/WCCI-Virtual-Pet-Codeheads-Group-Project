@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class OrganicPetTest {
-   OrganicPet underTest;
+    OrganicPet underTest;
 
     @BeforeEach
     public void setUp() {

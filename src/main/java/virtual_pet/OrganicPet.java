@@ -7,20 +7,23 @@ public class OrganicPet extends VirtualPet {
     protected int waste;
 
 
-    public OrganicPet (String name, String description, int hunger, int thirst, int boredom, int waste){
+    public OrganicPet(String name, String description, int hunger, int thirst, int boredom, int waste) {
         super(name);
         this.hunger = hunger;
         this.thirst = thirst;
         this.waste = waste;
         this.boredom = boredom;
     }
+
     public OrganicPet(String name, String description) {
         super(name);
         this.description = description;
     }
+
     public OrganicPet(String name) {
         super(name);
     }
+
     public void giveFood() {
         hunger += 15;
         thirst -= 5;
@@ -28,6 +31,7 @@ public class OrganicPet extends VirtualPet {
         waste -= 10;
         tick();
     }
+
     public void giveWater() {
         thirst += 15;
         hunger += 5;
@@ -35,6 +39,7 @@ public class OrganicPet extends VirtualPet {
         waste -= 10;
         tick();
     }
+
     public void playWithOrganic(String name) {
         boredom += 15;
         hunger -= 10;
@@ -46,17 +51,19 @@ public class OrganicPet extends VirtualPet {
     public void walkOrganic() {
         boredom += 15;
         hunger -= 10;
-        thirst -=5;
-        waste +=25;
+        thirst -= 5;
+        waste += 25;
         tick();
     }
 
     public int getWaste() {
         return waste;
     }
+
     public int getHunger() {
         return hunger;
     }
+
     public int getThirst() {
         return thirst;
     }

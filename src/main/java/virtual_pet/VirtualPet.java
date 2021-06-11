@@ -1,7 +1,5 @@
 package virtual_pet;
 
-//Maybe get rid of OrganicPet and just use this as both a main VP and OrganicPet base?
-
 import javax.swing.*;
 
 public class VirtualPet extends VirtualPetShelter {
@@ -15,7 +13,6 @@ public class VirtualPet extends VirtualPetShelter {
     private int oilLevel;
     protected int waste;
 
-    
 
     public VirtualPet(String name, String description, int hunger, int thirst, int boredom, int waste) {
         this.name = name;
@@ -28,31 +25,14 @@ public class VirtualPet extends VirtualPetShelter {
 
     }
 
-    public VirtualPet(String name) { super (); }
+    public VirtualPet(String name) {
+        super();
+    }
 
     public VirtualPet(String name, String description) {
         this.name = name;
         this.description = description;
     }
-
-
-//    public  void VirtualPetOrganic(String name, String description, int hunger, int thirst, int boredom) {
-//        this.name = name;
-//        this.description = description;
-//        this.hunger = hunger;
-//        this.thirst = thirst;
-//        this.boredom = boredom;
-//        isAlive = true;
-//    }
-
-//    public void VirtualPetRobotic(String name, String description, int batteryLevel, int oilLevel, int boredom) {
-//        this.name = name;
-//        this.description = description;
-//        this.batteryLevel = batteryLevel;
-//        this.oilLevel = oilLevel;
-//        this.boredom = boredom;
-//        isAlive = true;
-//    }
 
     public void giveFood() {
         hunger += 15;
@@ -89,8 +69,8 @@ public class VirtualPet extends VirtualPetShelter {
     public void walkOrganic(String name) {
         boredom += 15;
         hunger -= 10;
-        thirst -=5;
-        waste +=25;
+        thirst -= 5;
+        waste += 25;
         tick();
     }
 
@@ -134,6 +114,7 @@ public class VirtualPet extends VirtualPetShelter {
         oilLevel = Math.min(Math.max(oilLevel - 5, 0), 100);
         boredom = Math.min(Math.max(boredom - 5, 0), 100);
     }
+
     public String getName() {
         return name;
     }
@@ -150,11 +131,11 @@ public class VirtualPet extends VirtualPetShelter {
         return thirst;
     }
 
-    public int getBoredom(){
+    public int getBoredom() {
         return boredom;
     }
 
-        public int getBatteryLevel() {
+    public int getBatteryLevel() {
         return batteryLevel;
     }
 

@@ -9,7 +9,7 @@ public class VirtualPetShelter {
     int adoptPet;
     boolean isAlive = true;
 
-    ArrayList<VirtualPet> virtualOrganicPets = new ArrayList<VirtualPet>(); //ArrayList<VirtualPetOrganic> virtualOrganicPets = new ArrayList<VirtualPetOrganic>();
+    ArrayList<VirtualPet> virtualOrganicPets = new ArrayList<VirtualPet>();
     ArrayList<VirtualPet> virtualRoboticPets = new ArrayList<VirtualPet>();
     Scanner userInput = new Scanner(System.in);
 
@@ -28,12 +28,12 @@ public class VirtualPetShelter {
     String divider2 = "---------|-------|-------|-------";
 
     public void initialOrganicPets() {
-        VirtualPet yogi = new VirtualPet("Yogi", "Not your av-er-age bear.", 50, 50, 50,100);
-        VirtualPet smokey = new VirtualPet("Smokey", "Only YOU can prevent forest fires.", 40, 40, 40,100);
-        VirtualPet winnie = new VirtualPet("Winnie", "I have a rumbly in my tumbly.", 45, 40, 60,100);
-        VirtualPet gummi = new VirtualPet("Gummi", "Once was candy for kids, now 'candy' for adults.", 45, 60, 420,100);
-        VirtualPet ticktock = new VirtualPet("Tick-Tock", "I swallowed a clock.  So what?", 40, 50, 60,100);
-        VirtualPet wally = new VirtualPet("WallyGator", "Yea, I'm prone to mishaps.  So what?", 50, 60, 70,100);
+        VirtualPet yogi = new VirtualPet("Yogi", "Not your av-er-age bear.", 50, 50, 50, 100);
+        VirtualPet smokey = new VirtualPet("Smokey", "Only YOU can prevent forest fires.", 40, 40, 40, 100);
+        VirtualPet winnie = new VirtualPet("Winnie", "I have a rumbly in my tumbly.", 45, 40, 60, 100);
+        VirtualPet gummi = new VirtualPet("Gummi", "Once was candy for kids, now 'candy' for adults.", 45, 60, 420, 100);
+        VirtualPet ticktock = new VirtualPet("Tick-Tock", "I swallowed a clock.  So what?", 40, 50, 60, 100);
+        VirtualPet wally = new VirtualPet("WallyGator", "Yea, I'm prone to mishaps.  So what?", 50, 60, 70, 100);
         virtualOrganicPets.add(yogi);
         virtualOrganicPets.add(smokey);
         virtualOrganicPets.add(winnie);
@@ -41,14 +41,9 @@ public class VirtualPetShelter {
         virtualOrganicPets.add(ticktock);
         virtualOrganicPets.add(wally);
     }
+
     public void initialRoboticPets() {
-//        VirtualPet booboo = new VirtualPet("Boo-Boo", "But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 40);
-//        VirtualPet kissyfur = new VirtualPet("Kissyfur", "I used to be a circus bear.", 30, 30, 30);
-//        VirtualPet ally = new VirtualPet("Ally Gator", "It's a punny name.  So what?", 35, 70, 40);
-//        VirtualPet gummy = new VirtualPet("Gummy", "Yea, I'm a Brony.  So what?", 35, 70, 20);
-//        VirtualPet benali = new VirtualPet("Ben Ali", "I'm a prince.  So what?", 50, 60, 70);
-//        VirtualPet gabby = new VirtualPet("Gabby", "Yea, I hate Woody Woodpecker.  So what?", 40, 60, 80);
-        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet booboo = new RoboticPet("Boo-Boo", "But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
         RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
         RoboticPet ally = new RoboticPet("Ally Gator", "It's a punny name. So what?", 45, 70, 60);
         RoboticPet gummy = new RoboticPet("Gummy", "Yeah I'm a Brony. So what?", 45, 70, 60);
@@ -61,21 +56,24 @@ public class VirtualPetShelter {
         virtualRoboticPets.add(benali);
         virtualRoboticPets.add(gabby);
     }
+
     public void displayAllOrganicPetsDescriptions() {
         for (VirtualPet virtualOrganicPet : virtualOrganicPets) {
             System.out.println("[" + virtualOrganicPet.getName() + "]" + " " + virtualOrganicPet.getDescription());
             System.out.println("");
         }
     }
+
     public void displayAllRoboticPetsDescriptions() {
         for (VirtualPet virtualRoboticPet : virtualRoboticPets) {
             System.out.println("[" + virtualRoboticPet.getName() + "]" + " " + virtualRoboticPet.getDescription());
             System.out.println("");
         }
     }
+
     public void checkOrganicHealthStatus() {
         for (int i = 0; i < virtualOrganicPets.size(); i++) {
-            if (virtualOrganicPets.get(i).getHunger() <= 0 || virtualOrganicPets.get(i).getThirst() <= 0 || virtualOrganicPets.get(i).getBoredom() <= 0 || virtualOrganicPets.get(i).getWaste() <=0) {
+            if (virtualOrganicPets.get(i).getHunger() <= 0 || virtualOrganicPets.get(i).getThirst() <= 0 || virtualOrganicPets.get(i).getBoredom() <= 0 || virtualOrganicPets.get(i).getWaste() <= 0) {
                 isAlive = false;
                 System.out.println("");
                 System.out.println("You've neglected one of the pets!  We've been shut down!");
@@ -87,6 +85,7 @@ public class VirtualPetShelter {
             }
         }
     }
+
     public void displayOrganicHealthStatus() {
         System.out.printf("%-8s %-7s %-7s %-7s %-7s %n", heading1, heading2, heading3, heading4, heading5);
         System.out.println(divider);
@@ -96,6 +95,7 @@ public class VirtualPetShelter {
                     virtualOrganicPets.get(i).getBoredom(), virtualOrganicPets.get(i).getWaste());
         }
     }
+
     public void checkRoboticHealthStatus() {
         for (int i = 0; i < virtualRoboticPets.size(); i++) {
             if ((virtualRoboticPets.get(i).getBatteryLevel() <= 0 || virtualRoboticPets.get(i).getOilLevel() <= 0 || virtualRoboticPets.get(i).getBoredom() <= 0)) {
@@ -110,6 +110,7 @@ public class VirtualPetShelter {
             }
         }
     }
+
     public void displayRoboticHealthStatus() {
         System.out.printf("%-8s %-7s %-7s %-7s %n", heading6, heading7, heading8, heading9);
         System.out.println(divider2);
@@ -222,18 +223,21 @@ public class VirtualPetShelter {
             pet.tick();
         }
     }
+
     public void chargeAll() {
         for (VirtualPet pet : virtualRoboticPets) {
             pet.chargeBattery();
             pet.roboticTick();
         }
     }
+
     public void oilAll() {
         for (VirtualPet pet : virtualRoboticPets) {
             pet.oilRobotic();
             pet.roboticTick();
         }
     }
+
     public void playWithRobotic(String name) {
         for (VirtualPet pet : virtualRoboticPets) {
             if (pet.getName().equalsIgnoreCase(name)) {
@@ -243,6 +247,7 @@ public class VirtualPetShelter {
             }
         }
     }
+
     public void walkRobotic(String name) {
         for (VirtualPet pet : virtualRoboticPets) {
             if (pet.getName().equalsIgnoreCase(name)) {
@@ -252,6 +257,7 @@ public class VirtualPetShelter {
             }
         }
     }
+
     public void tick() {
         for (VirtualPet pet : virtualOrganicPets) {
             pet.tick();
