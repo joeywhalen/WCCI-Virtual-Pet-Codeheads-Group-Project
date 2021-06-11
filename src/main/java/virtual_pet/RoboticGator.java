@@ -1,13 +1,10 @@
 package virtual_pet;
 
-public class RoboticGator extends RoboticPet implements Walkable {
+public class RoboticGator extends RoboticPet {
 
-    public RoboticGator (String name) {
+    public RoboticGator(String name) {
         super(name);
 
     }
-
-    @Override
-    public void walk() {boredom -= 5;}
 
 }
