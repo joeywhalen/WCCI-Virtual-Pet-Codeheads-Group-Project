@@ -12,6 +12,7 @@ public class OrganicPet extends VirtualPet {
         this.hunger = hunger;
         this.thirst = thirst;
         this.waste = waste;
+        this.boredom = boredom;
     }
     public OrganicPet(String name, String description) {
         super(name);
@@ -50,10 +51,6 @@ public class OrganicPet extends VirtualPet {
         tick();
     }
 
-
-
-
-
     public int getWaste() {
         return waste;
     }
@@ -64,9 +61,4 @@ public class OrganicPet extends VirtualPet {
         return thirst;
     }
 }
-//    public void tick() {
-//        hunger = Math.min(Math.max(hunger - 5, 0), 100);
-//        thirst = Math.min(Math.max(thirst - 5, 0), 100);
-//        boredom = Math.min(Math.max(boredom - 5, 0), 100);
-//
-//    }
+

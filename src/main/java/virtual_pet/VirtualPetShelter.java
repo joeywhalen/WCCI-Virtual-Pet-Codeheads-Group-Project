@@ -30,8 +30,8 @@ public class VirtualPetShelter {
     public void initialOrganicPets() {
         VirtualPet yogi = new VirtualPet("Yogi", "Not your av-er-age bear.", 50, 50, 50,100);
         VirtualPet smokey = new VirtualPet("Smokey", "Only YOU can prevent forest fires.", 40, 40, 40,100);
-        VirtualPet winnie = new VirtualPet("Winnie", "I have a rumbly in my tumbly.", 35, 40, 60,100);
-        VirtualPet gummi = new VirtualPet("Gummi", "Once was candy for kids, now 'candy' for adults.", 35, 60, 420,100);
+        VirtualPet winnie = new VirtualPet("Winnie", "I have a rumbly in my tumbly.", 45, 40, 60,100);
+        VirtualPet gummi = new VirtualPet("Gummi", "Once was candy for kids, now 'candy' for adults.", 45, 60, 420,100);
         VirtualPet ticktock = new VirtualPet("Tick-Tock", "I swallowed a clock.  So what?", 40, 50, 60,100);
         VirtualPet wally = new VirtualPet("Wally Gator", "Yea, I'm prone to mishaps.  So what?", 50, 60, 70,100);
         virtualOrganicPets.add(yogi);
@@ -48,10 +48,10 @@ public class VirtualPetShelter {
 //        VirtualPet gummy = new VirtualPet("Gummy", "Yea, I'm a Brony.  So what?", 35, 70, 20);
 //        VirtualPet benali = new VirtualPet("Ben Ali", "I'm a prince.  So what?", 50, 60, 70);
 //        VirtualPet gabby = new VirtualPet("Gabby", "Yea, I hate Woody Woodpecker.  So what?", 40, 60, 80);
-        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 40);
-        RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 30, 30, 30);
-        RoboticPet ally = new RoboticPet("Ally Gator", "It's a punny name. So what?", 35, 70, 40);
-        RoboticPet gummy = new RoboticPet("Gummy", "Yeah I'm a Brony. So what?", 35, 70, 30);
+        RoboticPet booboo = new RoboticPet("Boo-Boo","But Yogi, Mr. Ranger isn't gonna like this.", 40, 70, 60);
+        RoboticPet kissyfur = new RoboticPet("Kissyfur", "I used to be a circus bear.", 40, 40, 60);
+        RoboticPet ally = new RoboticPet("Ally Gator", "It's a punny name. So what?", 45, 70, 60);
+        RoboticPet gummy = new RoboticPet("Gummy", "Yeah I'm a Brony. So what?", 45, 70, 60);
         RoboticPet benali = new RoboticPet("Ben Ali", "I'm a prince. So What?", 50, 60, 70);
         RoboticPet gabby = new RoboticPet("Gabby", "Yeah, I hate Woody Woodpecker. So What?", 40, 60, 80);
         virtualRoboticPets.add(booboo);
